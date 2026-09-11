@@ -20,7 +20,9 @@ Depois abra `http://localhost:4173` no navegador. Em GitHub Pages, abra `index.h
 pela URL publicada. O navegador pode bloquear a janela destacada na primeira tentativa;
 nesse caso, permita pop-ups para o site.
 
-Na janela do player, pressione `Esc` para fechá-la.
+Na janela do player, use `× Fechar` para fechá-la. O `Esc` também funciona quando o
+foco está na página; ao clicar dentro do iframe da Twitch, o navegador não repassa a
+tecla para a página externa por causa do isolamento entre domínios.
 
 O modo nativo “sempre no topo” não pode ser imposto por uma página web. Se o navegador
 oferecer Picture-in-Picture, ele pode ser usado para manter o vídeo sobre outras janelas.

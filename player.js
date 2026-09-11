@@ -5,7 +5,15 @@ var platform = query.get("platform") || "twitch";
 var channel = (query.get("channel") || "").trim().replace(/^#/, "");
 var player = document.getElementById("player");
 var status = document.getElementById("player-status");
+var closeButton = document.getElementById("close-player");
+var playerLabel = document.getElementById("player-label");
 var parent = window.location.hostname || "localhost";
+
+function fecharPlayer() {
+  window.close();
+}
+
+closeButton.addEventListener("click", fecharPlayer);
 
 window.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
@@ -27,5 +35,6 @@ if (!["twitch", "kick"].includes(platform) || !/^[a-zA-Z0-9_]+$/.test(channel)) 
   iframe.allow = "autoplay; fullscreen";
   iframe.referrerPolicy = "no-referrer-when-downgrade";
   player.appendChild(iframe);
-  status.textContent = (platform === "kick" ? "Kick: " : "Twitch: ") + channel;
+  playerLabel.textContent = (platform === "kick" ? "Kick: " : "Twitch: ") + channel;
+  status.textContent = "Pressione × Fechar para encerrar a janela.";
 }
