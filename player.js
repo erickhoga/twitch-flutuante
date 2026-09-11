@@ -7,6 +7,13 @@ var player = document.getElementById("player");
 var status = document.getElementById("player-status");
 var parent = window.location.hostname || "localhost";
 
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    window.close();
+  }
+});
+
 if (!["twitch", "kick"].includes(platform) || !/^[a-zA-Z0-9_]+$/.test(channel)) {
   status.textContent = "Canal inválido. Feche esta janela e tente novamente.";
 } else {

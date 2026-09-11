@@ -20,5 +20,7 @@ Depois abra `http://localhost:4173` no navegador. Em GitHub Pages, abra `index.h
 pela URL publicada. O navegador pode bloquear a janela destacada na primeira tentativa;
 nesse caso, permita pop-ups para o site.
 
+Na janela do player, pressione `Esc` para fechá-la.
+
 O modo nativo “sempre no topo” não pode ser imposto por uma página web. Se o navegador
 oferecer Picture-in-Picture, ele pode ser usado para manter o vídeo sobre outras janelas.
