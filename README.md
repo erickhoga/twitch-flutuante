@@ -1,10 +1,13 @@
 # Twitch flutuante
 
-Player web destacável para abrir um canal da Twitch em uma janela menor do navegador.
+Player web destacável para abrir um canal da Twitch ou da Kick em uma janela menor do navegador.
 
-O player usa o embed oficial da Twitch. A hospedagem pública precisa usar HTTPS e o
-domínio precisa ser informado no parâmetro `parent`; o código descobre o domínio atual
-automaticamente, funcionando em GitHub Pages.
+O player usa os embeds oficiais da Twitch e da Kick. A hospedagem pública precisa usar
+HTTPS. A Twitch também exige o domínio no parâmetro `parent`; o código descobre o
+domínio atual automaticamente, funcionando em GitHub Pages.
+
+As sugestões iniciais são exemplos e histórico local do navegador. Sugestões de busca
+em tempo real exigem integração com as APIs das plataformas e autenticação própria.
 
 ## Executar
 

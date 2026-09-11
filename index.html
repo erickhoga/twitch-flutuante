@@ -13,14 +13,26 @@
       <h1>Twitch flutuante</h1>
       <p class="intro">Informe um canal e abra o player em uma janela destacada do navegador.</p>
       <form id="channel-form">
-        <label for="channel">Canal da Twitch</label>
+        <div class="field-grid">
+          <div>
+            <label for="platform">Plataforma</label>
+            <select id="platform" name="platform">
+              <option value="twitch">Twitch</option>
+              <option value="kick">Kick</option>
+            </select>
+          </div>
+          <div>
+            <label for="channel">Nome do canal</label>
+            <input id="channel" name="channel" list="channel-suggestions" placeholder="ex.: twitchdev" autocomplete="off" required>
+            <datalist id="channel-suggestions"></datalist>
+          </div>
+        </div>
         <div class="controls">
-          <input id="channel" name="channel" placeholder="ex.: twitchdev" autocomplete="off" required>
           <button type="submit">Abrir player</button>
         </div>
       </form>
       <p id="status" class="status" role="status"></p>
-      <p class="hint">A Twitch exige que a página esteja publicada em HTTPS. No GitHub Pages, isso já é atendido.</p>
+      <p class="hint">As sugestões usam exemplos e canais pesquisados recentemente. O player oficial é carregado diretamente pela plataforma.</p>
     </section>
   </main>
   <script src="app.js"></script>
