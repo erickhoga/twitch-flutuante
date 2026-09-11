@@ -1,0 +1,20 @@
+# Twitch flutuante
+
+Player web destacável para abrir um canal da Twitch em uma janela menor do navegador.
+
+O player usa o embed oficial da Twitch. A hospedagem pública precisa usar HTTPS e o
+domínio precisa ser informado no parâmetro `parent`; o código descobre o domínio atual
+automaticamente, funcionando em GitHub Pages.
+
+## Executar
+
+```bash
+npm start
+```
+
+Depois abra `http://localhost:4173` no navegador. Em GitHub Pages, abra `index.html`
+pela URL publicada. O navegador pode bloquear a janela destacada na primeira tentativa;
+nesse caso, permita pop-ups para o site.
+
+O modo nativo “sempre no topo” não pode ser imposto por uma página web. Se o navegador
+oferecer Picture-in-Picture, ele pode ser usado para manter o vídeo sobre outras janelas.
