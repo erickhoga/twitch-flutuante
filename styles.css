@@ -17,6 +17,9 @@ h1 { margin: 8px 0; font-size: clamp(28px, 5vw, 42px); }
 .field-grid { display: grid; grid-template-columns: 150px 1fr; gap: 14px; }
 label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
 select { width: 100%; padding: 13px 14px; border: 1px solid #4b4b52; border-radius: 8px; background: #0e0e10; color: inherit; font-size: 16px; }
+.suggestions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+.suggestion { min-height: 32px; padding: 0 11px; border: 1px solid #5d3b78; border-radius: 999px; background: #261936; color: #e3cfff; font-size: 13px; }
+.suggestion:hover { background: #392052; }
 .controls { display: flex; gap: 10px; }
 input { min-width: 0; flex: 1; padding: 13px 14px; border: 1px solid #4b4b52; border-radius: 8px; background: #0e0e10; color: inherit; font-size: 16px; }
 button { border: 0; border-radius: 8px; padding: 0 18px; background: #9147ff; color: white; font-weight: 700; cursor: pointer; }

@@ -25,6 +25,7 @@
             <label for="channel">Nome do canal</label>
             <input id="channel" name="channel" list="channel-suggestions" placeholder="ex.: twitchdev" autocomplete="off" required>
             <datalist id="channel-suggestions"></datalist>
+            <div id="suggestions" class="suggestions" aria-label="Sugestões de canais"></div>
           </div>
         </div>
         <div class="controls">
@@ -32,7 +33,7 @@
         </div>
       </form>
       <p id="status" class="status" role="status"></p>
-      <p class="hint">As sugestões usam exemplos e canais pesquisados recentemente. O player oficial é carregado diretamente pela plataforma.</p>
+      <p class="hint">As sugestões usam uma lista local e os canais pesquisados recentemente.</p>
     </section>
   </main>
   <script src="app.js"></script>

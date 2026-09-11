@@ -6,8 +6,9 @@ O player usa os embeds oficiais da Twitch e da Kick. A hospedagem pública preci
 HTTPS. A Twitch também exige o domínio no parâmetro `parent`; o código descobre o
 domínio atual automaticamente, funcionando em GitHub Pages.
 
-As sugestões iniciais são exemplos e histórico local do navegador. Sugestões de busca
-em tempo real exigem integração com as APIs das plataformas e autenticação própria.
+As sugestões são locais: incluem exemplos conhecidos e o histórico do navegador, filtrados
+enquanto você digita. Busca de canais em tempo real e status online/offline exigem
+integração com as APIs das plataformas e autenticação própria.
 
 ## Executar
 

@@ -4,10 +4,11 @@ var form = document.getElementById("channel-form");
 var input = document.getElementById("channel");
 var platform = document.getElementById("platform");
 var suggestions = document.getElementById("channel-suggestions");
+var suggestionsBox = document.getElementById("suggestions");
 var status = document.getElementById("status");
 
 var examples = {
-  twitch: ["twitchdev", "riotgames", "loud_coringa", "gaules"],
+  twitch: ["twitchdev", "yoda", "riotgames", "loud_coringa", "gaules"],
   kick: ["xqc", "adinross", "trainwreckstv", "eliasn97"]
 };
 
@@ -27,6 +28,26 @@ function renderSuggestions() {
     suggestions.appendChild(option);
   });
   input.placeholder = platform.value === "kick" ? "ex.: xqc" : "ex.: twitchdev";
+
+  var term = input.value.trim().toLowerCase();
+  var matches = values.filter(function (value) {
+    return term.length >= 2 && value.toLowerCase().indexOf(term) === 0;
+  }).slice(0, 6);
+
+  suggestionsBox.replaceChildren();
+  suggestionsBox.hidden = !matches.length;
+  matches.forEach(function (value) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "suggestion";
+    button.textContent = value;
+    button.addEventListener("click", function () {
+      input.value = value;
+      suggestionsBox.hidden = true;
+      input.focus();
+    });
+    suggestionsBox.appendChild(button);
+  });
 }
 
 function saveRecent(channel) {
@@ -65,6 +86,7 @@ form.addEventListener("submit", function (event) {
 });
 
 platform.addEventListener("change", renderSuggestions);
+input.addEventListener("input", renderSuggestions);
 input.value = new URLSearchParams(window.location.search).get("channel") || "";
 platform.value = new URLSearchParams(window.location.search).get("platform") || "twitch";
 renderSuggestions();
